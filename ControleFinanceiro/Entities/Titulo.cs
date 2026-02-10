@@ -18,15 +18,12 @@ namespace ControleFinanceiro.Entities
         public Categoria? Categoria { get; set; }
         public bool Pago { get; set; }
         //Serviços 
-        TipoTitulo tipotitulo = new TipoTitulo();
-        Convenio convenio = new Convenio();
         public Titulo()
         {
         }
         public Titulo(int idTitulo, DateTime dataCadastro, string descricao, decimal valor,
             DateTime dataVencimento, DateTime? dataRecebimento, DateTime? dataPagamento,
-            decimal? valorTotal, decimal? valorFinal, MeioPagamento meioPagamento, TipoTitulo tipoTitulo, 
-            Convenio? convenio, Categoria? categoria, bool pago)
+            decimal? valorTotal, decimal? valorFinal, MeioPagamento meioPagamento,  Categoria? categoria, bool pago)
         {
             IdTitulo = idTitulo;
             DataCadastro = dataCadastro;
@@ -38,8 +35,6 @@ namespace ControleFinanceiro.Entities
             ValorTotal = valorTotal;
             ValorFinal = valorFinal;
             MeioPagamento = meioPagamento ?? throw new ArgumentNullException(nameof(meioPagamento));
-            tipotitulo = tipoTitulo ?? throw new ArgumentNullException(nameof(tipoTitulo));
-            convenio = convenio ?? throw new ArgumentNullException(nameof(convenio));
             Categoria = categoria;
             Pago = pago;
         }

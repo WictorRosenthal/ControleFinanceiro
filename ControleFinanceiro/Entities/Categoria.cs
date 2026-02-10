@@ -9,5 +9,9 @@
             IdCategoria = idCategoria;
             Descricao = descricao;
         }
+
+        public Categoria()
+        {
+        }
     }
 }

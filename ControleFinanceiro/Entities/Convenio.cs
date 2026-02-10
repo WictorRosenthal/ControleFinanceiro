@@ -7,7 +7,7 @@ namespace ControleFinanceiro.Entities
         public int IdConvenio { get; set; }
         public string Descricao { get; set; }
 
-        IConvenio _convenioService;
+        Services.Convenio _convenioService;
 
         public Convenio()
         {
